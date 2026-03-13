@@ -1,25 +1,57 @@
 {
-  "name": "vigil",
-  "version": "1.0.0",
-  "description": "A standalone rate limiting middleware for Express.js",
-  "main": "index.js",
-  "types": "index.d.ts",
-  "keywords": [
-    "rate-limit",
-    "rate-limiting",
-    "middleware",
-    "express",
-    "throttle"
-  ],
-  "author": "",
-  "license": "MIT",
-  "engines": {
-    "node": ">=14.0.0"
-  },
-  "peerDependencies": {
-    "express": "^4.0.0 || ^5.0.0"
-  },
-  "devDependencies": {
-    "express": "^4.18.2"
-  }
+"name": "vigil-security",
+"version": "1.0.0",
+"description": "Express.js security middleware suite including rate limiting, SQL injection protection, bot detection, and email verification.",
+"license": "MIT",
+"author": "m0nn",
+
+"keywords": [
+"express",
+"middleware",
+"security",
+"rate-limit",
+"rate-limiting",
+"sql-injection",
+"bot-detection",
+"email-verification",
+"throttle"
+],
+
+"main": "./index.js",
+"types": "./index.d.ts",
+
+"exports": {
+".": "./index.js",
+"./rate-limit": "./rate-limit/index.js",
+"./sql-injection": "./sql-injection/index.js",
+"./bot-detection": "./bot-detection/index.js",
+"./email-verification": "./email-verification/index.js"
+},
+
+"files": [
+"index.js",
+"index.d.ts",
+"README.md",
+"rate-limit",
+"sql-injection",
+"bot-detection",
+"email-verification"
+],
+
+"engines": {
+"node": ">=14"
+},
+
+"peerDependencies": {
+"express": "^4.0.0 || ^5.0.0"
+},
+
+"devDependencies": {
+"express": "^4.18.2"
+},
+
+"scripts": {
+"test": "node test.js"
 }
+}
+
